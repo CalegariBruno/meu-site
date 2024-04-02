@@ -1,0 +1,162 @@
+$primary-color: black;
+
+/* Mixin para estilizar botões */
+@mixin button-styles {
+    padding: 10px 20px;
+    background-color: $primary-color;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* Restante do CSS */
+
+body {
+    margin: 0;
+    color: white;
+    background-color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* Animação de deslizamento lateral */
+@keyframes slideInRight {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    text-align: center;
+    animation: slideInRight 1s ease-in-out;
+}
+
+.container {
+    margin: 0 50px;
+}
+
+nav {
+    background-color: grey;
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid grey;
+}
+
+h1 {
+    color: grey;
+}
+
+section {
+    margin-top: 50px;
+}
+
+.especialidades {
+    text-align: center;
+}
+
+.especialidades p {
+    padding: 0 15%;
+}
+
+.wordpress img {
+    width: 50px;
+    height: 50px;
+}
+
+.java img {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 10%;
+}
+
+footer img {
+    width: 40px;
+    height: 40px;
+}
+
+footer {
+    padding-top: 10px;
+    text-align: center;
+}
+
+footer a {
+    margin: 10px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 2px;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+}
+
+.especialidades {
+    display: grid;
+    height: 350px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "wordpress java ."
+        ". . ."
+        ". . .";
+}
+
+.wordpress {
+    grid-area: wordpress;
+}
+
+.java {
+    grid-area: java;
+}
+
+.sobre {
+    text-align: center;
+}
+
+// Aplicando o efeito do botão ao passar o mouse
+a.button:hover {
+    @include button-styles;
+}
+
+@media (max-width: 450px){
+    body{
+        background: white;
+        color: black;
+    }
+    footer p{
+        color: black;
+    }
+}
