@@ -1,8 +1,13 @@
 @charset "UTF-8";
 /* Mixin para estilizar botões */
 /* Restante do CSS */
-body {
+
+*{
+  box-sizing: border-box;
   margin: 0;
+}
+
+body {
   color: white;
   background-color: black;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,17 +23,24 @@ body {
     transform: translateX(0);
   }
 }
+
 html {
   scroll-behavior: smooth;
 }
 
 header {
   text-align: center;
+  margin: 50px 0;
   animation: slideInRight 1s ease-in-out;
 }
 
+p{
+  text-align: justify;
+  margin: 50px 0;
+}
+
 .container {
-  margin: 0 50px;
+  margin: 0 200px;
 }
 
 nav {
@@ -56,16 +68,17 @@ header img {
   border: 5px solid grey;
 }
 
+.img-perfil{
+  margin-bottom: 25px;
+}
+
 h1 {
   color: grey;
 }
 
-section {
-  margin-top: 50px;
-}
-
 .especialidades {
   text-align: center;
+  margin-top: 50px;
 }
 
 .especialidades p {
